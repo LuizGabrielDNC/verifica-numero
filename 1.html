@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #n1{
+            width: 200px; height: 200px;border: 1px solid #000;
+            float: left;margin-right: 10px;font-size: 100px;text-align: center;
+            line-height: 200px;background-color: #EEE;
+        }
+        #n2{
+            width: 200px; height: 200px;border: 1px solid #000;
+            float: left;margin-right: 10px;font-size: 100px;text-align: center;
+            line-height: 200px;background-color: #EEE;
+        }
+
+    </style>
+</head>
+<body onload="resetar()">
+    <div id="n1">0</div>
+    <input type="text" name="" id="n2">
+    <div style="clear: both;"></div>
+    <button onclick="verifica()"> Verificar</button>
+    <button onclick="resetar()">RESETAR</button>
+    
+    <script>
+
+    function verifica(){    
+        var n1 =document.getElementById("n1").innerHTML;
+        var n2 =document.getElementById("n2").value;
+
+        if(n1 == n2){
+            alert("VOCE ACERTOU");
+
+
+        }else{
+            alert("Voce errou");
+        }
+        resetar();
+    }
+    function resetar(){
+        document.getElementById("n2").value ="";
+        var r =Math.floor(Math.random()*100);
+        
+        document.getElementById("n1").innerHTML=r;
+    }
+
+
+    </script>
+</body>
+</html>
